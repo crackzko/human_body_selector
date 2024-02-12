@@ -4,20 +4,20 @@ version: 0.0.1
 homepage: https://github.com/Nizam54/human_body_selector
 
 environment:
-  sdk: ">=2.15.0 <3.0.0"
-  flutter: ">=2.5.0"
+  sdk: ">=3.2.6 <4.0.0"
+  flutter: ">=3.2.6"
 
 dependencies:
-  svg_path_parser: ^1.0.0
-  path_drawing: ^0.5.1
-  equatable: ^2.0.3
+  svg_path_parser: ^1.1.2
+  path_drawing: ^1.0.1
+  equatable: ^2.0.5
   flutter:
     sdk: flutter
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^1.0.0
+  flutter_lints: ^3.0.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
