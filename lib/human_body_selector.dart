@@ -76,7 +76,7 @@ class SelectableSvgState extends State<HumanBodySelector> {
   void initState() {
     super.initState();
     final isFemale = widget.map == Maps.HUMAN || widget.map == Maps.HUMAN1;
-    WidgetsBinding.instance!.addPostFrameCallback((_) async {
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
       frontPartsList = isFemale
           ? await Parser.instance.svgToCityList(Maps.HUMAN)
           : await Parser.instance.svgToCityList(Maps.MALE);
@@ -131,10 +131,10 @@ class SelectableSvgState extends State<HumanBodySelector> {
           ? frontPartsList
           : backPartsList);
       if (selectedPartsList.isNotEmpty) {
-        selectedPartsList.forEach((element) {
+        for (var element in selectedPartsList) {
           final rem1 = _partsList.remove(element);
           if (rem1) _partsList.add(element);
-        });
+        }
       }
       mapSize = _sizeController.mapSize;
     });
